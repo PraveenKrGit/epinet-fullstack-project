@@ -2,6 +2,7 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+require('dotenv').config();
 
 const app = express();
 app.use(express.json());
@@ -11,8 +12,7 @@ app.use(cors());
 
 const UserModel = require("./models/UserSchema");
 
-const MONGO_URL =
-  "mongodb+srv://praveen:prav@cluster0.vugtmfe.mongodb.net/epinet?retryWrites=true&w=majority";
+
 
 // mongoose.connect(MONGO_URI,{
 //     useNewUrlParser:true,
@@ -22,7 +22,7 @@ const MONGO_URL =
 // }
 
 mongoose
-  .connect(MONGO_URL)
+  .connect(process.env.MONGO_URL)
   .then(() => console.log("DB Connection Successfull!"))
   .catch((err) => {
     console.log(err);
