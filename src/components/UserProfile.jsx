@@ -17,7 +17,6 @@ const UserProfile = () => {
       .get(GET_USER)
       .then((response) => {
         setUser(response.data);
-        console.log(response.data);
       })
       .catch((err) => {
         console.log(err);
