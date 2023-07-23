@@ -20,7 +20,7 @@ const UserProfile = () => {
       })
       .catch((err) => {
         console.log(err);
-      });
+      }); 
   };
 
   useEffect(() => {

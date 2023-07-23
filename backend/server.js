@@ -20,7 +20,7 @@ const UserModel = require("./models/UserSchema");
 // });()=>{
 //     console.log("connected to DB")
 // }
-
+ 
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => console.log("DB Connection Successfull!"))
